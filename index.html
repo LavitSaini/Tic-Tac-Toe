@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="main">
+
+        <!-- Game Heading Section -->
+        <h1 id="game-heading">Tic Tac Toe</h1>
+
+        <!-- Game Sounds Effects-->
+        <audio src="/sounds/click.mp3" id="click-audio"></audio>
+        <audio src="/sounds/win_sound.mp3" id="win-audio"></audio>
+
+        <!-- Game Start & Close Section -->
+        <div id="game-start" class="display-flex justify-center align-center">
+            <div id="play-close-buttons-box" class="display-flex flex-direction">
+                <button class="btn" id="play">Play</button>
+                <button class="btn" id="close">Close</button>
+            </div>
+        </div>
+    
+        <!-- Game Box Section -->
+        <div class="game-board">
+            <div id="cells-box" class="container">
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+            </div>
+        </div>
+
+        <div id="game-control-box" class="display-flex justify-center align-center">
+            <div class="display-flex flex-direction">
+                <button class="btn" id="reset">Reset</button>
+                <h2 id="winner-box"></h2>
+                <button class="btn" id="play-again">Play Again</button>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

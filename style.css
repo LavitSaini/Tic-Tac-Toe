@@ -1,0 +1,324 @@
+/* fonts  */
+
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+
+/* Css Reset */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Single Day", cursive;
+}
+
+button {
+  font-family: "Single Day", cursive;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Colors */
+
+:root {
+  --first: #f2f2f2;
+  --second: #393e46;
+  --third: #f96d00;
+  --fourth: #222831;
+}
+
+/* Utility Classses */
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.btn {
+  border: 2px solid var(--first);
+  padding: 0.5rem 1.2rem;
+  font-size: 2rem;
+  background-color: var(--third);
+  border-radius: 0.5rem;
+  color: var(--first);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--second);
+  border-color: var(--third);
+  color: var(--third);
+  transition: all 0.3s ease;
+}
+
+/* Main Section */
+
+#main {
+  height: 100vh;
+  padding: 2rem;
+  background-color: var(--second);
+  display: grid;
+  grid-template-rows: 80px 1fr;
+}
+
+/* Game Heading Section */
+
+#game-heading {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--first);
+}
+
+/* Game Play & Close Buttons Section */
+
+#play-close-buttons-box {
+  gap: 1rem;
+}
+
+/* Game Section */
+
+/* Game Board */
+
+/* Cells Box */
+
+#cells-box {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f96d00;
+  grid-gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+/* Game Box Cells */
+
+#cells-box .cell {
+  background-color: var(--fourth);
+  border-radius: 0.75rem;
+  color: var(--first);
+  font-size: 5rem;
+  border: 0;
+  cursor: pointer;
+  height: 6.5rem;
+  width: 100%;
+}
+
+#cells-box .cell:hover {
+  background-color: var(--second);
+}
+
+/* Game Control Section */
+
+/* Winner Box */
+
+#game-control-box {
+  display: none;
+}
+
+#reset {
+  margin-top: 2rem;
+}
+
+#play-again {
+  width: 11rem;
+  margin: 0 auto;
+}
+
+#winner-box {
+  font-size: 3rem;
+  color: var(--third);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 568px){
+  html{
+    font-size: 12px;
+  }
+
+  .container{
+    max-width: 330px;
+  }
+
+  #main{
+    grid-template-rows: 80px auto 2fr;
+  }
+
+  #game-control-box {
+    align-items: flex-start;
+  }
+  
+}
+
+@media screen and (max-width: 300px){
+  html{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 268px){
+  html{
+    font-size: 8px;
+  }
+}
+
